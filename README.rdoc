@@ -1,28 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This program was created in Ruby 1.9.3 and Rails 4.0.2.
 
-Things you may want to cover:
+Installation instructions:
 
-* Ruby version
+* Put this directory somewhere.
+* Make sure you have an appropriate version of Ruby and Rails installed.
+* In this directory, type "rake db:migrate" to run the initial migrations on the database.
+* In this directory, type "rails server" to start the server.
+* Open a web browser and enter "localhost:3000" to start using the program.
 
-* System dependencies
+Tips:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Separate the entering tasks step and the completing or repeating tasks step.
+* Group related tasks by adding a tag at the beginning of the description.
+* Set urgency as low as it reasonably can be, so the list of active tasks doesn't get too cluttered.
