@@ -1,0 +1,275 @@
+// Place all the styles related to the MainScreen controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#global {
+	top:0px;
+	margin-top:0%;
+	left:0px;
+	margin-left:0%;
+	width:48%;
+	height:18%;
+	overflow-y:scroll;
+}
+
+#messages {
+	top:0px;
+	margin-top:0%;
+	right:0px;
+	margin-right:0%;
+	width:48%;
+	height:38%;
+	overflow-y:scroll;
+}
+
+#tasks {
+	bottom:0px;
+	margin-bottom:0%;
+	left:0px;
+	margin-left:0%;
+	width:48%;
+	height:78%;
+	overflow-y:scroll;
+	overflow-x:scroll;
+}
+
+#points {
+	bottom:0px;
+	margin-bottom:0%;
+	right:0px;
+	margin-right:0%;
+	width:48%;
+	height:58%;
+	overflow-y:scroll;
+	overflow-x:scroll;
+	font-size:100%;
+}
+
+.maindivision {
+	position:absolute;
+	background-color:#ccaabb;
+	padding:5px;
+	margin:1%;
+	border:10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	border-style:ridge;
+	border-color:gray;
+	overflow:hidden;
+	font-size:80%;
+}
+
+body {
+	background-color:#555588;
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+}
+
+#tasktable {
+	border-collapse:collapse;
+}
+
+td.description_task {
+	border:solid 1px black;
+}
+
+.activated {
+	font-weight:bold;
+}
+
+.pointsspan {
+	font-weight:bold;
+}
+
+.pointstextspan {
+	font-weight:bold;
+}
+
+.points0 {
+	color:#222222;
+}
+
+.points1 {
+	color:#604020;
+}
+
+.points2 {
+	color:#404060;
+}
+
+.points3 {
+	color:#806040;
+}
+
+.points4 {
+	color:#d0d0f0;
+}
+
+.points5 {
+	color:#e0d020;
+}
+
+.points6 {
+	color:#e0e070;
+}
+
+.points7 {
+	color:#ffffff;
+}
+
+.points8 {
+	color:#dd0000;
+}
+
+.points9 {
+	color:#009900;
+}
+
+.points10 {
+	color:#0000dd;
+}
+
+.completebutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:#306108;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;
+	font-style:normal;
+	height:20px;
+	line-height:2px;
+	width:75px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
+}
+.completebutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
+}.completebutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+.repeatbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+	background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;
+	font-style:normal;
+	height:20px;
+	line-height:2px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #1570cd;
+}
+.repeatbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+	background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}.repeatbutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+.deletebutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;
+	font-style:normal;
+	height:20px;
+	line-height:2px;
+	width:55px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #810e05;
+}
+.deletebutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}.deletebutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */

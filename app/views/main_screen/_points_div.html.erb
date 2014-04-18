@@ -1,0 +1,21 @@
+<h3>Points</h3>
+
+<ul>
+<% 0.upto(PointsData::MAX_WEIGHT) do |p_t| %>
+  <li>
+    <span class='pointsspan points<%= p_t %>'>
+      <%= @user.current_points[p_t] %></span>
+    <%= PointsData::POINT_TYPE_FOR_WEIGHT[p_t].capitalize %> Points 
+    (<span class='pointsspan points<%= p_t %>'><%= @user.points_today[p_t] %></span>
+    today, 
+    <span class='pointsspan points<%= p_t %>'>
+      <%= @user.total_points[p_t] %></span>
+    total, worth <%= PointsData::TIME_EQUIVALENT_FOR_WEIGHT[p_t] %> and weight <%= p_t %>) 
+  </li>
+<% end %>
+</ul>
+
+<p>
+  <%= PointsData::POINT_TYPE_FOR_WEIGHT[0].capitalize %> Point Equivalents:
+  <%= @user.point_equivalents(@user.current_points) %> (<%= @user.point_equivalents(@user.points_today) %> today, <%= @user.point_equivalents(@user.total_points) %> total)
+</p>

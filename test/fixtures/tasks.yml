@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activated: false
+  completed: false
+  description: MyText
+  urgency: 1
+  weight: 1
+
+two:
+  activated: false
+  completed: false
+  description: MyText
+  urgency: 1
+  weight: 1

@@ -1,0 +1,9 @@
+<h3>Messages</h3>
+
+<ul>
+<% @messages.each do |m| %>
+  <li>
+    <%= raw m.contents %>
+  </li>
+<% end %>
+</ul>

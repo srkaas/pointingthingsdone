@@ -1,0 +1,5 @@
+<h2>Pointing Things Done</h2>
+
+<%= form_for @user, url: flush_user_path(@user.id), html: {method: 'get'} do |f| %>
+  <%= f.submit "Flush and export points" %>
+<% end %>

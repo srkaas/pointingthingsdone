@@ -1,0 +1,40 @@
+<h3>Tasks</h3>
+
+<table id='tasktable'>
+  <tr id='addtask'>
+    <%= form_for(@task, url: tasks_path, html: {method: 'post'}) do |f| %>
+      <%= f.text_field :description %>
+      <%= f.label :weight %>
+      <%= f.number_field :weight, max: PointsData::MAX_WEIGHT, min: 0, value: 4 %>
+      <%= f.label :urgency %>
+      <%= f.number_field :urgency, max: PointsData::MAX_WEIGHT, min: 0, value: 5 %>
+      <%= f.submit "Add" %>
+    <% end %>
+  </tr>
+  <%= content_tag_for(:tr, @tasks) do |t| %>
+    <%= content_tag_for(:td, t, :description) do %>
+    <% if t.activated %><span class='activated'>
+      <%= t.description %>
+    <% else %><span class='nonactivated'>
+      <%= t.description %>
+    <% end %></span>
+
+      (<span class='pointstextspan points<%= t.weight %>'><%= PointsData::POINT_TYPE_FOR_WEIGHT[t.weight].capitalize + ' Point' %></span>)
+    <% end %>
+    <%= content_tag_for(:td, t, :complete_button) do %>
+      <%= form_for(t, url: complete_task_path(t.id), html: {method: 'get'}) do |f| %>
+        <%= f.submit "Complete", class: 'completebutton' %>
+      <% end %>
+    <% end %>
+    <%= content_tag_for(:td, t, :repeat_button) do %>
+      <%= form_for(t, url: repeat_task_path(t.id), html: {method: 'get'}) do |f| %>
+        <%= f.submit("Repeat (#{PointsData::SHORTER_TIME_FOR_URGENCY[t.urgency]})", class: 'repeatbutton') %>
+      <% end %>
+    <% end %>
+    <%= content_tag_for(:td, t, :delete_button) do %>
+      <%= form_for(t, url: task_path(t.id), html: {method: 'delete'}) do |f| %>
+        <%= f.submit "Delete", class: 'deletebutton' %>
+      <% end %>
+    <% end %>
+  <% end %>
+</table>
