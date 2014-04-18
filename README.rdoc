@@ -8,7 +8,7 @@ Installation instructions:
 * Make sure you have an appropriate version of Ruby and Rails installed.
 * In this directory, type "rake db:migrate" to run the initial migrations on the database.
 * In this directory, type "rails server" to start the server.
-* Open a web browser and enter "localhost:3000" to start using the program.
+* Open a web browser and enter "localhost:3000" to start using the program as "user" with password "password".
 
 Tips:
 
