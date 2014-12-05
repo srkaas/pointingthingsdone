@@ -10,8 +10,26 @@ Installation instructions:
 * In this directory, type "rails server" to start the server.
 * Open a web browser and enter "localhost:3000" to start using the program as "user" with password "password".
 
+How to use the program:
+
+* Add new tasks by filling out the form under "Tasks". You can set the weight and the urgency of every new task.
+* Each possible weight, from 0 to 10, corresponds to a point type listed on the right. For example, completing a task of weight 3 gives you a bronze point. Adding 1 to the weight should roughly correspond to a doubling in time cost or usefulness of the task.
+* The urgency of a task also ranges between 0 and 10 and determines how soon the task becomes active. A task with urgency 5 will usually become active within an hour. Adding 1 to the urgency makes a task become active about three times as quickly.
+* Tasks can be completed with the Complete button; this will give you points based on the task's weight, but only if the task was active. Tasks can be completed and scheduled again for later, with the same time delay as when they were created, using the Repeat button. Finally, using the Delete button will eliminate a task from the list without giving any points.
+* Tasks can be active or inactive. Active tasks show up in bold at the top of your list. A task will become active with a probability that depends on the task's urgency and on how much time has elapsed. Completing a task gives you points only if the task is active. The idea is to mostly pay attention to the active tasks, but the inactive tasks are listed at the bottom in case you need to look at them.
+* For each type of point, the program tracks how many you've scored but not yet exported from the program (the first number), how many you've scored during the last day (the second number), and how many you've scored in total (the third number). Using the assumption that each type of point represents a task twice as valuable as the previous type, it calculates a very rough estimate of the total value of the tasks you've completed, denominated in minutes of your time.
+* The "flush and export points" button exports your current points to a YAML file downloaded to your browser and sets them to zero within the program itself. You could figure out some system for using these points somewhere, or try to be motivated by the points for their own sake.
+
+Rationale:
+
+* Giving tasks different values motivates you to focus more on important tasks.
+* Having multiple types of points makes it easier to turn the system into a game than if it were different amounts of one type.
+* If there's an adjustable delay between when you enter tasks and when they become active, you can concentrate on adding a lot of tasks as a separate step, and they won't distract you until they become relevant.
+* Making the delay somewhat random takes away the temptation to try to predict when each task becomes active.
+* On the other hand, this makes the program less suitable for tasks with exact times/deadlines.
+
 Tips:
 
-* Separate the entering tasks step and the completing or repeating tasks step.
-* Group related tasks by adding a tag at the beginning of the description.
-* Set urgency as low as it reasonably can be, so the list of active tasks doesn't get too cluttered.
+* Add tasks in advance and let the system deal with making them active after the right time delay.
+* Group related tasks by adding a tag (e.g. a project name) at the beginning of the description.
+* Set the urgency for each task as low as it can reasonably be, so the list of active tasks doesn't get too cluttered.
